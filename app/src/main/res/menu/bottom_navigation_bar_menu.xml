@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_bar_item_plp"
+        android:enabled="true"
+        android:icon="@drawable/plp_nav_bar_icon_selector"
+        android:title="@string/string_products" />
+    <item
+        android:id="@+id/nav_bar_item_profile"
+        android:enabled="true"
+        android:icon="@drawable/profile_nav_bar_icon_selector"
+        android:title="@string/string_profile" />
+</menu>

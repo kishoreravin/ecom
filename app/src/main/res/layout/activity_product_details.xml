@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cat_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF8F3"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_collapseMode="pin" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/CustomProgressHorizontalTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/density_size_12"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-5dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorAccent"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/pdp_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF8F3"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/img_product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/density_size_460"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/density_size_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_brand_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/density_size_8"
+                            android:textAllCaps="true"
+                            android:textColor="#111111"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Brand name" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_product_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/density_size_4"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="#83878A"
+                            android:textSize="@dimen/text_size_14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_brand_name"
+                            tools:text="Striped slim fit shirt with patch pocket" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_discount_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/density_size_4"
+                            android:ellipsize="end"
+                            android:textColor="#111111"
+                            android:textSize="@dimen/text_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+                            tools:text="₹ 944" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_mrp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/density_size_8"
+                            android:ellipsize="end"
+                            android:textColor="#83878A"
+                            android:textSize="@dimen/text_size_12"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_discount_price"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/tv_discount_price"
+                            app:layout_constraintTop_toTopOf="@+id/tv_discount_price"
+                            tools:text="₹ 944" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/density_size_8"
+                            android:drawableStart="@drawable/offers_icon"
+                            android:drawablePadding="@dimen/density_size_8"
+                            android:ellipsize="end"
+                            android:textColor="#85BE53"
+                            android:textSize="@dimen/text_size_10"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_mrp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/tv_mrp"
+                            app:layout_constraintTop_toTopOf="@+id/tv_mrp"
+                            tools:text="50 rs off" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_variants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/density_size_12"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/tv_variants_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/density_size_16"
+                            android:text="@string/text_select_size"
+                            android:textColor="@color/colorBlack"
+                            android:textFontWeight="800"
+                            android:textSize="@dimen/text_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_variants"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/density_size_8"
+                            android:layout_marginTop="@dimen/text_size_16"
+                            android:layout_marginBottom="@dimen/text_size_16"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_variants_label" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/density_size_12"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/tv_product_details_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/density_size_16"
+                            android:text="@string/text_product_details"
+                            android:textColor="@color/colorBlack"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/text_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_product_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/density_size_16"
+                            android:text="@string/text_select_size"
+                            android:textColor="#83878A"
+                            android:textSize="@dimen/text_size_12"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_product_details_label"
+                            tools:text="@tools:sample/lorem/random" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_similar_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/density_size_12"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/tv_similar_to_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/density_size_16"
+                            android:text="@string/text_similar_to"
+                            android:textColor="@color/colorBlack"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/text_size_16"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_product_name_for_similar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/density_size_16"
+                            android:layout_marginTop="@dimen/density_size_8"
+                            android:text="@string/text_similar_to"
+                            android:textColor="#83878A"
+                            android:textSize="@dimen/text_size_14"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_similar_to_label"
+                            tools:text="Striped slim fit shirt with patch pocket" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_similar_products"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/density_size_8"
+                            android:layout_marginTop="@dimen/density_size_8"
+                            android:layout_marginBottom="@dimen/text_size_16"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_product_name_for_similar" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/proceed_to_checkout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/density_size_64"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/density_size_8"
+            android:orientation="horizontal"
+            android:padding="@dimen/density_size_8"
+            tools:visibility="visible">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_btn_share"
+                android:layout_width="@dimen/density_size_44"
+                android:layout_height="@dimen/density_size_44"
+                android:background="#D9D9D9"
+                android:src="@drawable/share_icon"
+                app:contentPadding="@dimen/density_size_10" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_btn_like"
+                android:layout_width="@dimen/density_size_44"
+                android:layout_height="@dimen/density_size_44"
+                android:layout_marginStart="@dimen/density_size_16"
+                android:background="#D9D9D9"
+                android:src="@drawable/wish_list_icon"
+                app:contentPadding="@dimen/density_size_10" />
+
+            <FrameLayout
+                android:id="@+id/add_to_cart"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/density_size_44"
+                android:layout_marginStart="@dimen/density_size_16"
+                android:layout_weight="1"
+                android:background="@color/colorBlack">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorBlack"
+                    android:drawablePadding="@dimen/density_size_8"
+                    android:gravity="center"
+                    android:text="@string/text_add_to_bag"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/cart_icon" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/remove"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/density_size_44"
+                android:layout_marginStart="@dimen/density_size_16"
+                android:layout_weight="1"
+                android:background="#D9D9D9"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#D9D9D9"
+                    android:gravity="center"
+                    android:text="@string/string_remove"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/go_to_bag"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/density_size_44"
+                android:layout_marginStart="@dimen/density_size_16"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/img_btn_add_to_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/density_size_2"
+                    android:background="@color/colorPrimary"
+                    android:drawablePadding="@dimen/density_size_8"
+                    android:drawableTint="@color/colorBlack"
+                    android:gravity="center"
+                    android:text="@string/text_go_to_bag"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/cart_icon" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/pdp_api_error_view"
+            layout="@layout/view_api_error"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/pdp_network_error_view"
+            layout="@layout/view_no_network"
+            android:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

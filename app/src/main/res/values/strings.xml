@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">eCom</string>
+    <string name="string_products">Products</string>
+    <string name="string_profile">Profile</string>
+    <string name="text_popular_brands">Popular brands</string>
+    <string name="text_select_size">Select Size</string>
+    <string name="text_product_details">Product Details</string>
+    <string name="text_similar_to">Similar to</string>
+    <string name="text_add_to_bag">Add to bag</string>
+    <string name="string_retry">Retry</string>
+    <string name="text_web_error">we are taking care of it. Please try again later.</string>
+    <string name="text_something_went_wrong">Oops! Something went wrong</string>
+    <string name="text_no_internet_connection">No internet Connection</string>
+    <string name="text_please_try_again_later">Please try again later.</string>
+    <string name="text_hbd">Wishing you a very happy birthday</string>
+    <string name="text_hbd_offers">Checkout offers specially made for you</string>
+    <string name="string_premium">Premium</string>
+    <string name="string_wallet">Wallet</string>
+    <string name="text_your_orders">Your Orders</string>
+    <string name="string_wishlist">Wishlist</string>
+    <string name="text_help_center">Help Center</string>
+    <string name="text_edit_profile">Edit Profile</string>
+    <string name="text_saved_addresses">Saved Addresses</string>
+    <string name="text_premium_message">Thank you for joining our rewards program</string>
+    <string name="text_search_products">Search products</string>
+    <string name="string_remove">Remove</string>
+    <string name="text_go_to_bag">Go to bag</string>
 </resources>
