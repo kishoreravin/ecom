@@ -4,19 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.ecom.R
 import com.example.ecom.base.BaseViewModelFragment
 import com.example.ecom.databinding.FragmentUserProfilePageBinding
 import com.example.ecom.models.UserModel
 import com.example.ecom.pages.userProfile.viewmodel.UserProfileViewModel
+import com.example.ecom.utils.CommonUtils
 import com.example.ecom.utils.setVisibility
 import com.example.ecom.utils.toColorListState
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserProfilePage : BaseViewModelFragment() {
     private lateinit var mBinding: FragmentUserProfilePageBinding
     private val mViewModel: UserProfileViewModel by viewModel()
+    private val commonUtils: CommonUtils by inject()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mBinding = FragmentUserProfilePageBinding.inflate(inflater, container, false)
@@ -41,22 +45,22 @@ class UserProfilePage : BaseViewModelFragment() {
                     .setAllCornerSizes(40F)
                     .build()
                 hbdLayout.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                    fillColor = "#FF6B00".toColorListState()
+                    fillColor = commonUtils.getColor(R.color.colorAccent).toColorListState()
                 }
                 flIcon.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                    fillColor = "#FFF8F3".toColorListState()
+                    fillColor = commonUtils.getColor(R.color.colorOrangeWhite).toColorListState()
                 }
                 flWalletIcon.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                    fillColor = "#FFF8F3".toColorListState()
+                    fillColor = commonUtils.getColor(R.color.colorOrangeWhite).toColorListState()
                 }
                 clPremium.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                    fillColor = "#ffffff".toColorListState()
-                    strokeColor = "#FF6B00".toColorListState()
+                    fillColor = commonUtils.getColor(R.color.colorPrimary).toColorListState()
+                    strokeColor = commonUtils.getColor(R.color.colorAccent).toColorListState()
                     strokeWidth = 2f
                 }
                 clWallet.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                    fillColor = "#ffffff".toColorListState()
-                    strokeColor = "#FF6B00".toColorListState()
+                    fillColor = commonUtils.getColor(R.color.colorPrimary).toColorListState()
+                    strokeColor = commonUtils.getColor(R.color.colorAccent).toColorListState()
                     strokeWidth = 2f
                 }
             }

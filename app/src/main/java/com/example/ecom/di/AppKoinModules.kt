@@ -8,6 +8,7 @@ import com.example.ecom.pages.productDetailsPage.viewmodel.ProductDetailsViewMod
 import com.example.ecom.pages.productListPage.repository.ProductListRepository
 import com.example.ecom.pages.productListPage.viewmodel.ProductListViewModel
 import com.example.ecom.pages.userProfile.viewmodel.UserProfileViewModel
+import com.example.ecom.utils.CommonUtils
 import com.example.ecom.utils.isNetworkConnected
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModelOf
@@ -22,6 +23,7 @@ private val networkModule = module {
     factory(named("IsNetworkConnected")) { isNetworkConnected(androidContext()) }
     factory { (url: String) -> getApiManager(get(), url) }
     singleOf(::ApiManager)
+    singleOf(::CommonUtils)
 }
 
 private val repositories = module {

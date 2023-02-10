@@ -8,7 +8,7 @@
         android:id="@+id/cat_parent_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFF8F3"
+        android:background="@color/colorOrangeWhite"
         android:fitsSystemWindows="true">
 
         <LinearLayout
@@ -39,7 +39,7 @@
                 android:id="@+id/pdp_parent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FFF8F3"
+                android:background="@color/colorOrangeWhite"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 <LinearLayout
@@ -67,7 +67,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/density_size_8"
                             android:textAllCaps="true"
-                            android:textColor="#111111"
+                            android:textColor="@color/colorBlack"
                             android:textSize="@dimen/text_size_14"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
                             android:layout_marginTop="@dimen/density_size_4"
                             android:ellipsize="end"
                             android:maxLines="2"
-                            android:textColor="#83878A"
+                            android:textColor="@color/colorLightGrey"
                             android:textSize="@dimen/text_size_14"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/density_size_4"
                             android:ellipsize="end"
-                            android:textColor="#111111"
+                            android:textColor="@color/colorBlack"
                             android:textSize="@dimen/text_size_16"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/density_size_8"
                             android:ellipsize="end"
-                            android:textColor="#83878A"
+                            android:textColor="@color/colorLightGrey"
                             android:textSize="@dimen/text_size_12"
                             app:layout_constraintBottom_toBottomOf="@+id/tv_discount_price"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +194,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/density_size_16"
                             android:text="@string/text_select_size"
-                            android:textColor="#83878A"
+                            android:textColor="@color/colorLightGrey"
                             android:textSize="@dimen/text_size_12"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -229,7 +229,7 @@
                             android:layout_marginStart="@dimen/density_size_16"
                             android:layout_marginTop="@dimen/density_size_8"
                             android:text="@string/text_similar_to"
-                            android:textColor="#83878A"
+                            android:textColor="@color/colorLightGrey"
                             android:textSize="@dimen/text_size_14"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_similar_to_label"
@@ -268,7 +268,7 @@
                 android:id="@+id/img_btn_share"
                 android:layout_width="@dimen/density_size_44"
                 android:layout_height="@dimen/density_size_44"
-                android:background="#D9D9D9"
+                android:background="@color/colorWhiteGrey"
                 android:src="@drawable/share_icon"
                 app:contentPadding="@dimen/density_size_10" />
 
@@ -277,7 +277,7 @@
                 android:layout_width="@dimen/density_size_44"
                 android:layout_height="@dimen/density_size_44"
                 android:layout_marginStart="@dimen/density_size_16"
-                android:background="#D9D9D9"
+                android:background="@color/colorWhiteGrey"
                 android:src="@drawable/wish_list_icon"
                 app:contentPadding="@dimen/density_size_10" />
 
@@ -309,14 +309,14 @@
                 android:layout_height="@dimen/density_size_44"
                 android:layout_marginStart="@dimen/density_size_16"
                 android:layout_weight="1"
-                android:background="#D9D9D9"
+                android:background="@color/colorWhiteGrey"
                 android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="#D9D9D9"
+                    android:background="@color/colorWhiteGrey"
                     android:gravity="center"
                     android:text="@string/string_remove"
                     android:textAllCaps="true"

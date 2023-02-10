@@ -115,15 +115,15 @@ class ProductDetailsPage : BaseViewModelActivity() {
                 .setAllCornerSizes(40F)
                 .build()
             addToCart.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                fillColor = "#111111".toColorListState()
+                fillColor = getColorStateList(R.color.colorBlack)
             }
             remove.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                fillColor = "#D9D9D9".toColorListState()
+                fillColor = getColorStateList(R.color.colorWhiteGrey)
             }
             goToBag.background = MaterialShapeDrawable(backgroundShapeModel).apply {
-                fillColor = "#ffffff".toColorListState()
+                fillColor = getColorStateList(R.color.colorPrimary)
                 strokeWidth = 2f
-                strokeColor = "#111111".toColorListState()
+                strokeColor = getColorStateList(R.color.colorBlack)
             }
 
             val radius = 40f

@@ -96,7 +96,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/density_size_16"
                             android:text="@string/text_popular_brands"
-                            android:textColor="#111111"
+                            android:textColor="@color/colorBlack"
                             android:textSize="@dimen/text_size_16"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="parent"

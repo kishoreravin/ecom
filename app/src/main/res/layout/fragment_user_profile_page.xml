@@ -138,7 +138,7 @@
                                 android:layout_width="@dimen/density_size_56"
                                 android:layout_height="match_parent"
                                 android:layout_margin="@dimen/density_size_2"
-                                android:background="#FFF8F3"
+                                android:background="@color/colorOrangeWhite"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent">
 
@@ -189,7 +189,7 @@
                                 android:layout_width="@dimen/density_size_56"
                                 android:layout_height="match_parent"
                                 android:layout_margin="@dimen/density_size_2"
-                                android:background="#FFF8F3"
+                                android:background="@color/colorOrangeWhite"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent">
 
@@ -264,7 +264,7 @@
                             android:layout_height="@dimen/density_size_2"
                             android:layout_marginTop="@dimen/density_size_16"
                             android:layout_marginEnd="@dimen/density_size_16"
-                            android:background="#FFF8F3"
+                            android:background="@color/colorOrangeWhite"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/tv_order"
@@ -319,7 +319,7 @@
                             android:layout_height="@dimen/density_size_2"
                             android:layout_marginTop="@dimen/density_size_16"
                             android:layout_marginEnd="@dimen/density_size_16"
-                            android:background="#FFF8F3"
+                            android:background="@color/colorOrangeWhite"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/tv_wishlist"
@@ -374,7 +374,7 @@
                             android:layout_height="@dimen/density_size_2"
                             android:layout_marginTop="@dimen/density_size_16"
                             android:layout_marginEnd="@dimen/density_size_16"
-                            android:background="#FFF8F3"
+                            android:background="@color/colorOrangeWhite"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/tv_help"
@@ -429,7 +429,7 @@
                             android:layout_height="@dimen/density_size_2"
                             android:layout_marginTop="@dimen/density_size_16"
                             android:layout_marginEnd="@dimen/density_size_16"
-                            android:background="#FFF8F3"
+                            android:background="@color/colorOrangeWhite"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@id/tv_profile"

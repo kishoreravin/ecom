@@ -52,6 +52,9 @@ fun String.toColor(): Int {
 fun String.toColorListState(): ColorStateList {
     return ColorStateList.valueOf(Color.parseColor(this))
 }
+fun Int.toColorListState(): ColorStateList {
+    return ColorStateList.valueOf(this)
+}
 
 fun SearchView.getQueryTextChangeStateFlow(): StateFlow<String> {
 

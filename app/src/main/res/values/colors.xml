@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryStatusBarColor">#ffffff</color>
+    <color name="colorPrimaryStatusBarColor">@android:color/transparent</color>
     <color name="colorAccent">#FF6B00</color>
     <color name="colorLightGrey">#83878A</color>
+    <color name="colorWhiteGrey">#D9D9D9</color>
     <color name="colorBlack">#111111</color>
+    <color name="colorLightAccent">#FFE7D6</color>
+    <color name="colorOrangeWhite">#FFF8F3</color>
 </resources>
