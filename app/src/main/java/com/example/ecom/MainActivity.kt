@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationBarView
 class MainActivity : AppCompatActivity() {
     private lateinit var navigationItemSelectedListener: NavigationBarView.OnItemSelectedListener
     private lateinit var mBinding: ActivityMainBinding
+    private var text: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
                 loadFragment(ProductListPage())
             }
         }
+
         mBinding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_bar_item_plp -> loadFragment(ProductListPage())

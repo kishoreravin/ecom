@@ -36,7 +36,7 @@ class ProductListViewModel(private val productListRepository: ProductListReposit
                 .collectLatest {
                     when (it) {
                         is ApiState.Error -> {
-                            Log.e("Error", it.exception.toString())
+                            showApiError()
                         }
                         is ApiState.Failed -> showApiError()
                         ApiState.NoNetwork -> showNetworkError()
